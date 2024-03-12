@@ -1,0 +1,56 @@
+Write a program to read a number from the user. Create a child process and child should calculate the square of the number and parent should calculate the half of the number. 
+
+1.	#include<stdio.h> //program 5
+2.	void main()
+3.	{
+4.	 int num, pid, square, half;
+5.	 printf("Enter a number");
+6.	 scanf("%d", &num);  
+7.	 pid = fork();  //child is created
+8.	if(pid==0) //child task
+9.	  {
+10.	square = num * num;
+11.	prinf("The square of the number is %d", square);
+12.	}
+13.	else    //parent task
+14.	{
+15.	    half = num/2;
+16.	    prinf("The half of the number is %d", half);
+17.	
+18.	}
+19.	}
+ 
+
+
+Write a program. Create a child process. Load the executable file factorial into child address space using execlp() function
+
+1.	#include<stdio.h> //program 3
+2.	void main()
+3.	{
+4.	  int pid;
+5.	  pid = fork(); 
+6.	  if(pid==0) //child process
+  {
+7.	     execlp("/home/year2/factorial","factorial",NULL); 
+8.	  }
+9.	  else
+10.	printf(“\nParent is processing”);
+11.	}
+
+12.	#include<stdio.h> //factorial program 
+13.	void main()
+14.	{
+15.	    int num, i, fact=1;
+16.	    printf(“\nEnter the number”);
+17.	    scanf(“%d”, &num);
+18.	    for(i=0;i<num’i++)
+19.	    {
+20.	        fact = fact*i;
+21.	    }
+22.	    printf(“The Factorial of %d is %d”, num, fact);
+23.	}
+
+Compile the above program. //gcc factorial.c –o factorial
+Then run the first program.    
+
+
