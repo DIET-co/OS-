@@ -48,7 +48,7 @@ public class ArraySum {
         int[] array = new int[1000000]; // Array of 10,000 elements
         Random random = new Random();
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100000000); // Fill the array with random numbers up to 100
+            array[i] = random.nextInt(1000000); // Fill the array with random numbers up to 100000000
         }
 
         // Serial Summation
